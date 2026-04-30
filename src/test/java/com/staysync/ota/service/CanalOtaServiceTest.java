@@ -103,7 +103,7 @@ class CanalOtaServiceTest {
 
         ReservaOta result = canalOtaService.registrarReservaExterna(1L, "BK-12345", Map.of());
 
-        assertThat(result.isSincronizada()).isTrue();
+        assertThat(result.getSincronizada()).isTrue();
         verify(reservaOtaRepository, never()).save(any());
     }
 }
